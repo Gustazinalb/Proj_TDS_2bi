@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: #F29F05;
+    display: flex;
+    align-items: center; /* centraliza vertical */
+    justify-content: space-between; /* separa esquerda e direita */
+    padding: 0 40px;
+    height: 80px;
+}
+
+.logo img{
+    height: 75px; /* controla o tamanho */
+    width: auto;
+    border-radius: 50px;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 60px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    transition: 0.3s;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Efeito hover */
+.menu li a:hover{
+    color:rgb(0, 0, 0);
+}
+body{
+    background-color: #F28705;
+}
+.container {
+  display: grid;
+  /* Define 3 colunas de tamanhos iguais (1 fração de espaço) */
+  grid-template-columns: repeat(4, 1fr);
+  /* Adiciona espaçamento de 10px entre os itens */
+  gap: 30px;
+  padding:15px;
+}
+.item {
+  background-color: #8C4303;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 15px;
+  color: #ffffff;
+}
+.item h2:hover{
+    color: black;
+}
