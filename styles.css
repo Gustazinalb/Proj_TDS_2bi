@@ -11,13 +11,15 @@ header{
     align-items: center; /* centraliza vertical */
     justify-content: space-between; /* separa esquerda e direita */
     padding: 0 40px;
-    height: 80px;
+    height: 100px;
 }
 
+
 .logo img{
-    height: 75px; /* controla o tamanho */
+    height: 80px; /* controla o tamanho */
     width: auto;
     border-radius: 50px;
+    margin: 10px;
 }
 
 .menu{
@@ -28,7 +30,7 @@ header{
 
 .menu li a{
     text-decoration: none;
-    color: white;
+    color: #8C4303;
     font-size: 40px;
     transition: 0.3s;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -60,4 +62,9 @@ body{
 }
 .item h2:hover{
     color: black;
+}
+.cabeçalio{
+    text-align: center;
+    font-size: 35px;
+
 }
