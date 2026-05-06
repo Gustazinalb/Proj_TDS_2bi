@@ -66,5 +66,22 @@ body{
 .cabeçalio{
     text-align: center;
     font-size: 35px;
+    margin-top: 10px;
 
+}
+/* Exemplo CSS */
+.container-grid {
+  display: grid; /* 1. Define o contêiner */
+  margin: 10px 30px 0 30px;
+  /* 2. Cria 3 colunas de tamanhos iguais (1 fração cada) */
+  grid-template-columns: repeat(7, 1fr); 
+  
+  /* 3. Adiciona espaçamento entre os itens */
+  gap: 10px; 
+}
+
+.item {
+  background-color: #8C4303;
+  padding: 15px;
+  text-align: center;
 }
