@@ -18,8 +18,9 @@
 
         <nav>
             <ul class="menu">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="catalogo.php">Catálogo</a></li>
                 <li><a href="cronograma.php">Cronograma</a></li>
-                <li><a href="index.php">Catálogo</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>

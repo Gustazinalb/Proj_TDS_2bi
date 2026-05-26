@@ -14,7 +14,10 @@ header{
     height: 100px;
 }
 
-
+img{
+    width: 100%;
+    height: auto;
+}
 .logo img{
     height: 80px; /* controla o tamanho */
     width: auto;
@@ -186,4 +189,63 @@ body{
         font-size: 18px;
     }
 
+}
+/* ---------- HOME ---------- */
+
+main div{
+    position: relative;
+}
+
+main div img{
+    display: block;
+    width: 100%;
+}
+
+/* BOTÕES */
+
+.btn{
+    position: absolute;
+    bottom: 90px;
+
+    text-decoration: none;
+    padding: 18px 40px;
+    border-radius: 12px;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* botão preenchido */
+
+.btn-laranja{
+    background: #f39c12;
+    color: rgb(0, 0, 0);
+
+    left: 80px;
+}
+
+.btn-laranja:hover{
+    background: #ffffff;
+    transform: scale(1.05);
+}
+
+/* botão transparente */
+
+.btn-borda{
+    border: 3px solid #f39c12;
+    color: #f39c12;
+    background: transparent;
+
+    left: 350px;
+}
+
+.btn-borda:hover{
+    border: 3px solid #000000;
+    background: #ffffff;
+    transform: scale(1.05);
+    color: black
 }
