@@ -44,7 +44,18 @@ img{
     color:rgb(0, 0, 0);
 }
 body{
-    background-color: #F28705;
+    background-color: #ffb300;
+}
+main{
+    background:
+        linear-gradient(
+            rgba(0,0,0,.85),
+            rgba(0,0,0,.85)
+        ),
+        url("img/fundo.png");
+
+    background-size: cover;
+    background-position: center;
 }
 .container {
   display: grid;
@@ -61,16 +72,25 @@ body{
   width: 100%;
   border: 1px solid black;
   border-radius: 15px;
-  color: #ffffff;
+  h2{
+    font-weight: bold;
+        font-size: 35px;
+        color: #ffffff;
+  }
 }
 .item h2:hover{
     color: black;
+    transition-duration: 0.5s;
 }
 .cabeçalio{
     text-align: center;
-    font-size: 35px;
-    margin-top: 10px;
-
+    
+    padding: 15px;
+    h2{
+        font-weight: bold;
+        font-size: 35px;
+        color: #ffffff;
+    }
 }
 /* Exemplo CSS */
 .container-grid {
@@ -203,7 +223,7 @@ main div img{
 
 /* BOTÕES */
 
-.btn{
+.botao{
     position: absolute;
     bottom: 90px;
 
@@ -221,21 +241,21 @@ main div img{
 
 /* botão preenchido */
 
-.btn-laranja{
+.botao-laranja{
     background: #f39c12;
     color: rgb(0, 0, 0);
 
     left: 80px;
 }
 
-.btn-laranja:hover{
+.botao-laranja:hover{
     background: #ffffff;
     transform: scale(1.05);
 }
 
 /* botão transparente */
 
-.btn-borda{
+.botao-borda{
     border: 3px solid #f39c12;
     color: #f39c12;
     background: transparent;
@@ -243,9 +263,88 @@ main div img{
     left: 350px;
 }
 
-.btn-borda:hover{
+.botao-borda:hover{
     border: 3px solid #000000;
     background: #ffffff;
     transform: scale(1.05);
     color: black
+}
+/* ================= FOOTER ================= */
+
+.footer{
+    background: #1c1c1c;
+    color: white;
+
+    padding: 60px 20px 30px;
+
+    text-align: center;
+
+    border-top: 4px solid #F29F05;
+    background:
+        linear-gradient(
+            rgba(0,0,0,.85),
+            rgba(0,0,0,.85)
+        ),
+        url("img/fundo2.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-logo h2{
+    font-size: 48px;
+    color: #F29F05;
+    letter-spacing: 4px;
+}
+
+.footer-logo p{
+    margin-top: 10px;
+    color: #cfcfcf;
+    font-size: 20px;
+}
+
+.footer-contato{
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    flex-wrap: wrap;
+}
+
+.footer-contato span{
+    font-size: 18px;
+}
+
+.footer-menu{
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    flex-wrap: wrap;
+}
+
+.footer-menu a{
+    color: white;
+    text-decoration: none;
+
+    font-size: 18px;
+    transition: .3s;
+}
+
+.footer-menu a:hover{
+    color: #F29F05;
+}
+
+.footer-copy{
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,.15);
+
+    color: #999;
 }
