@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="destaques.css">
 
     <!-- Icons -->
     <link rel="stylesheet"
@@ -104,6 +105,81 @@
             </div>
         </div>
     </section>
+    <!-- DESTAQUES -->
+
+<section class="destaques">
+
+    <div class="destaque-card">
+        <i class="fa-solid fa-calendar-days"></i>
+        <h3>Atualizado</h3>
+        <p>Eventos toda semana</p>
+    </div>
+
+    <div class="destaque-card">
+        <i class="fa-solid fa-beer-mug-empty"></i>
+        <h3>Happy Hour</h3>
+        <p>Promoções especiais</p>
+    </div>
+
+    <div class="destaque-card">
+        <i class="fa-solid fa-ticket"></i>
+        <h3>Eventos</h3>
+        <p>Entrada gratuita</p>
+    </div>
+
+    <div class="destaque-card">
+        <i class="fa-solid fa-bell"></i>
+        <h3>Novidades</h3>
+        <p>Toda semana</p>
+    </div>
+
+</section>
+
+
+<!-- EVENTO DA SEMANA -->
+
+<section class="evento-semana">
+
+    <div class="evento-info">
+
+        <h2>🎸 Evento da Semana</h2>
+
+        <h3>SEXTA - DJ NIGHT</h3>
+
+        <p>
+            Venha curtir os melhores hits da cidade,
+            drinks especiais e uma experiência única.
+        </p>
+
+        <span>⏰ 22:00</span>
+
+        <a href="catalogo.php" class="botao-evento">
+            VER CATÁLOGO
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- INSTAGRAM -->
+
+<section class="instagram">
+
+    <h2>📸 SIGA NOSSO INSTAGRAM</h2>
+
+    <div class="insta-grid">
+
+        <img src="img/jack.png" alt="">
+        <img src="img/skol.png" alt="">
+        <img src="img/vinho1.png" alt="">
+        <img src="img/intention.png" alt="">
+
+    </div>
+
+    <p>@brasa.bar</p>
+
+</section>
 </main>
 <footer class="footer">
 
@@ -113,8 +189,8 @@
     </div>
 
     <div class="footer-contato">
-        <span>📍 São Paulo - SP</span>
-        <span>📞 (11) 99999-9999</span>
+        <span>📍 Campo Mourão - PR</span>
+        <span>📞 (44) 99714-9528</span>
         <span>📸 @brasa-bar</span>
     </div>
 
@@ -122,7 +198,7 @@
         <a href="index.php">Home</a>
         <a href="catalogo.php">Catálogo</a>
         <a href="cronograma.php">Cronograma</a>
-        <a href="#">Contato</a>
+        <a href="contato.php">Contato</a>
     </nav>
 
     <div class="footer-copy">

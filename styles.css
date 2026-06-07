@@ -348,3 +348,245 @@ main div img{
 
     color: #999;
 }
+
+/* ========================================= */
+/* RESPONSIVIDADE GERAL */
+/* ========================================= */
+
+html,
+body{
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+.navbar-brand img{
+    height:70px;
+    width:auto;
+}
+
+@media(max-width:768px){
+
+    .navbar-brand img{
+        height:55px;
+    }
+
+    .navbar-nav{
+        text-align:center;
+        padding-top:10px;
+    }
+
+}
+
+/* ========================================= */
+/* CATÁLOGO */
+/* ========================================= */
+
+.container{
+
+    display:grid !important;
+
+    grid-template-columns:
+    repeat(4,minmax(0,1fr));
+
+    gap:20px;
+
+    padding:15px;
+}
+
+.item{
+    width:100%;
+    padding:15px;
+}
+
+.item img{
+
+    width:100%;
+
+    max-width:130px;
+
+    height:auto;
+
+    display:block;
+
+    margin:auto;
+}
+
+.item h2{
+    font-size:26px;
+}
+
+@media(max-width:991px){
+
+    .container{
+        grid-template-columns:
+        repeat(2,minmax(0,1fr));
+    }
+
+    .item img{
+        max-width:100px;
+    }
+
+    .item h2{
+        font-size:20px;
+    }
+
+}
+
+@media(max-width:575px){
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .item img{
+        max-width:90px;
+    }
+
+    .item h2{
+        font-size:18px;
+    }
+
+}
+
+/* ========================================= */
+/* CRONOGRAMA */
+/* ========================================= */
+
+.grid-eventos{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,minmax(220px,1fr));
+
+    gap:20px;
+
+    padding:20px;
+
+    margin:0;
+}
+
+@media(max-width:1200px){
+
+    .grid-eventos{
+        grid-template-columns:
+        repeat(3,minmax(220px,1fr));
+    }
+
+}
+
+@media(max-width:900px){
+
+    .grid-eventos{
+        grid-template-columns:
+        repeat(2,minmax(220px,1fr));
+    }
+
+}
+
+@media(max-width:600px){
+
+    .grid-eventos{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .topo-card h2{
+        font-size:24px;
+    }
+
+    .conteudo-card h3{
+        font-size:22px;
+    }
+
+    .conteudo-card h4{
+        font-size:20px;
+    }
+
+    .icone{
+        font-size:45px;
+    }
+
+}
+
+/* ========================================= */
+/* HOME */
+/* ========================================= */
+
+@media(max-width:768px){
+
+    .botao{
+
+        width:80%;
+
+        left:50% !important;
+
+        transform:translateX(-50%) !important;
+
+        font-size:15px;
+
+        padding:10px 15px;
+
+        text-align:center;
+    }
+
+    .botao-laranja{
+        bottom:65px;
+    }
+
+    .botao-borda{
+        bottom:10px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .botao{
+
+        width:90%;
+
+        font-size:14px;
+
+        padding:8px 12px;
+    }
+
+    .botao-laranja{
+        bottom:55px;
+    }
+
+    .botao-borda{
+        bottom:5px;
+    }
+
+}
+
+/* ========================================= */
+/* FOOTER */
+/* ========================================= */
+
+@media(max-width:768px){
+
+    .footer-logo h2{
+        font-size:30px;
+    }
+
+    .footer-logo p{
+        font-size:15px;
+    }
+
+    .footer-contato{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .footer-menu{
+        flex-direction:column;
+        gap:15px;
+    }
+
+}

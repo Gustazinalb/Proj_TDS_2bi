@@ -35,8 +35,8 @@
     </div>
 
     <div class="footer-contato">
-        <span>📍 São Paulo - SP</span>
-        <span>📞 (11) 99999-9999</span>
+        <span>📍 Campo Mourão - PR</span>
+        <span>📞 (44) 99714-9528</span>
         <span>📸 @brasa-bar</span>
     </div>
 
@@ -44,7 +44,7 @@
         <a href="index.php">Home</a>
         <a href="catalogo.php">Catálogo</a>
         <a href="cronograma.php">Cronograma</a>
-        <a href="#">Contato</a>
+        <a href="contato.php">Contato</a>
     </nav>
 
     <div class="footer-copy">
