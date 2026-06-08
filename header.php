@@ -31,19 +31,19 @@
 
             <ul class="navbar-nav ms-auto">
 
-                <li class="nav-item">
+                <li class="nav-item fs-4">
                     <a class="nav-link text-dark fw-bold" href="index.php">Home</a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item fs-4">
                     <a class="nav-link text-dark fw-bold" href="catalogo.php">Catálogo</a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item fs-4">
                     <a class="nav-link text-dark fw-bold" href="cronograma.php">Cronograma</a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item fs-4">
                     <a class="nav-link text-dark fw-bold" href="contato.php">Contato</a>
                 </li>
 
