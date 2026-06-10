@@ -27,7 +27,11 @@
 
         </button>
 
-        <div class="collapse navbar-collapse" id="menu">
+        <div class="d-flex justify-content-center " id="menu">
+            <form class="d-flex" role="pesquisar">
+        <input class="form-control me-2 botaoPesquisa" type="search" placeholder="🔍Pesquisar" style="width: 400px;">
+        
+      </form>
 
             <ul class="navbar-nav ms-auto">
 
@@ -46,7 +50,7 @@
                 <li class="nav-item fs-4">
                     <a class="nav-link text-dark fw-bold" href="contato.php">Contato</a>
                 </li>
-
+                
             </ul>
 
         </div>
