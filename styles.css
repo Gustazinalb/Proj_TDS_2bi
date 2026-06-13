@@ -47,6 +47,8 @@ body{
     background-color: #ffb300;
 }
 main{
+    min-height: 100vh;
+
     background:
         linear-gradient(
             rgba(0,0,0,.85),
@@ -590,4 +592,26 @@ body{
         gap:15px;
     }
 
+}
+.resultado-busca{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,minmax(220px,1fr));
+
+    gap:30px;
+
+    padding:20px;
+}
+
+.resultado-busca .item{
+    width:100%;
+}
+
+.resultado-busca .item img{
+    width:100%;
+    max-width:130px;
+    height:auto;
+    display:block;
+    margin:auto;
 }

@@ -170,10 +170,10 @@
 
     <div class="insta-grid">
 
-        <img src="img/jack.png" alt="">
+        <img src="img/jack-apple.png" alt="">
         <img src="img/skol.png" alt="">
-        <img src="img/vinho1.png" alt="">
-        <img src="img/intention.png" alt="">
+        <img src="img/perola.png" alt="">
+        <img src="img/intencion-pink.png" alt="">
 
     </div>
 

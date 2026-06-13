@@ -1,4 +1,166 @@
+<?php
 
+$produtos = [
+
+    // WHISKY
+    [
+        "nome" => "Jack Daniels",
+        "imagem" => "img/jack-daniel.png",
+        "categoria" => "Whisky",
+        "preco" => 149.90
+    ],
+    [
+        "nome" => "Chivas",
+        "imagem" => "img/chivas.png",
+        "categoria" => "Whisky",
+        "preco" => 169.90
+    ],
+    [
+        "nome" => "Jack Apple",
+        "imagem" => "img/jack-apple.png",
+        "categoria" => "Whisky",
+        "preco" => 159.90
+    ],
+    [
+        "nome" => "Red Label",
+        "imagem" => "img/red-label.png",
+        "categoria" => "Whisky",
+        "preco" => 139.90
+    ],
+
+    // CERVEJA
+    [
+        "nome" => "Skol",
+        "imagem" => "img/skol.png",
+        "categoria" => "Cerveja",
+        "preco" => 5.90
+    ],
+    [
+        "nome" => "Original",
+        "imagem" => "img/original.png",
+        "categoria" => "Cerveja",
+        "preco" => 8.90
+    ],
+    [
+        "nome" => "Itaipava",
+        "imagem" => "img/itaipava.png",
+        "categoria" => "Cerveja",
+        "preco" => 6.90
+    ],
+    [
+        "nome" => "Antartica",
+        "imagem" => "img/antartica.png",
+        "categoria" => "Cerveja",
+        "preco" => 6.50
+    ],
+
+    // GIN
+    [
+        "nome" => "Gardon",
+        "imagem" => "img/gardon.png",
+        "categoria" => "Gin",
+        "preco" => 79.90
+    ],
+    [
+        "nome" => "Intencion Blue",
+        "imagem" => "img/intencion-blue.png",
+        "categoria" => "Gin",
+        "preco" => 69.90
+    ],
+    [
+        "nome" => "Intencion Pink",
+        "imagem" => "img/intencion-pink.png",
+        "categoria" => "Gin",
+        "preco" => 69.90
+    ],
+    [
+        "nome" => "Rocks",
+        "imagem" => "img/rocks.png",
+        "categoria" => "Gin",
+        "preco" => 89.90
+    ],
+
+    // VODKA
+    [
+        "nome" => "Balalaika",
+        "imagem" => "img/balalaika.png",
+        "categoria" => "Vodka",
+        "preco" => 24.90
+    ],
+    [
+        "nome" => "Ciroc",
+        "imagem" => "img/ciroc.png",
+        "categoria" => "Vodka",
+        "preco" => 129.90
+    ],
+    [
+        "nome" => "Intencion Vodka",
+        "imagem" => "img/intencion-vodka.png",
+        "categoria" => "Vodka",
+        "preco" => 39.90
+    ],
+    [
+        "nome" => "Skyy",
+        "imagem" => "img/skyy.png",
+        "categoria" => "Vodka",
+        "preco" => 79.90
+    ],
+
+    // VINHO
+    [
+        "nome" => "Pérola",
+        "imagem" => "img/perola.png",
+        "categoria" => "Vinho",
+        "preco" => 39.90
+    ],
+    [
+        "nome" => "San Severo",
+        "imagem" => "img/san-severo.png",
+        "categoria" => "Vinho",
+        "preco" => 49.90
+    ],
+    [
+        "nome" => "Quinta Moraes",
+        "imagem" => "img/quinta-morais.png",
+        "categoria" => "Vinho",
+        "preco" => 59.90
+    ],
+    [
+        "nome" => "Reservado",
+        "imagem" => "img/reservado.png",
+        "categoria" => "Vinho",
+        "preco" => 44.90
+    ]
+
+];
+
+function buscarProdutos($produtos, $termo)
+{
+    $resultado = [];
+
+    foreach ($produtos as $produto) {
+
+        if (
+            stripos($produto['nome'], $termo) !== false ||
+            stripos($produto['categoria'], $termo) !== false
+        ) {
+            $resultado[] = $produto;
+        }
+
+    }
+
+    return $resultado;
+}
+
+$busca = $_GET['busca'] ?? '';
+
+$resultados = [];
+
+if (!empty($busca)) {
+    $resultados = buscarProdutos($produtos, $busca);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -13,12 +175,69 @@
 
 <body>
     <?php include 'header.php'; ?>
+    <?php
 
-    <main>
-    </div>
-        <div class="cabeçalio ">
-            <h2>Whisky</h2>
+// FUNÇÃO PARA DESCONTO
+function aplicarDesconto($preco, $percentual)
+{
+    return $preco - ($preco * $percentual / 100);
+}
+
+// FUNÇÃO DE FILTRO
+function filtrarProdutosCaros($produtos, $valorMinimo)
+{
+    $resultado = [];
+
+    foreach ($produtos as $produto) {
+        if ($produto['preco'] > $valorMinimo) {
+            $resultado[] = $produto;
+        }
+    }
+
+    return $resultado;
+}
+
+?>
+<main>
+    <<?php if (!empty($busca)) : ?>
+
+    <?php if (count($resultados) > 0) : ?>
+
+        <div class="resultado-busca">
+
+    <?php foreach ($resultados as $produto) : ?>
+
+        <div class="item">
+
+            <img src="<?= $produto['imagem'] ?>" alt="">
+
+            <h2><?= $produto['nome'] ?></h2>
+
+            <p>
+                R$ <?= number_format($produto['preco'], 2, ',', '.') ?>
+            </p>
+
         </div>
+
+    <?php endforeach; ?>
+
+</div>
+
+    <?php else : ?>
+
+        <div class="alert alert-danger">
+            Nenhum produto encontrado.
+        </div>
+
+    <?php endif; ?>
+
+<?php else : ?>
+
+    <!-- TODO O SEU CATÁLOGO ATUAL FICA AQUI -->
+
+    <div class="cabeçalio">
+        <h2>Whisky</h2>
+    </div>
         <div class="container">
             <div class="item">
                 <img src="img/jack-daniel.png" alt="">
@@ -122,7 +341,10 @@
                     <h2>Reservado</h2>
                 </div>
             </div> 
-    </main>    
+
+<?php endif; ?>
+
+</main>  
 
     <footer class="footer">
         <div class="footer-logo">

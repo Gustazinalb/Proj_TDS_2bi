@@ -28,10 +28,18 @@
         </button>
 
         <div class="d-flex justify-content-center " id="menu">
-            <form class="d-flex" role="pesquisar">
-        <input class="form-control me-2 botaoPesquisa" type="search" placeholder="🔍Pesquisar" style="width: 400px;">
+            <form class="d-flex" method="GET" action="catalogo.php">
+    <input
+        class="form-control me-2 botaoPesquisa"
+        type="search"
+        name="busca"
+        placeholder="🔍Pesquisar produto"
+        style="width: 400px;">
         
-      </form>
+    <button class="btn btn-dark">
+        Buscar
+    </button>
+</form>
 
             <ul class="navbar-nav ms-auto">
 
